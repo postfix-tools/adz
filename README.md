@@ -1,12 +1,12 @@
 # ADZ
 
-Adz is a small tool for showing some quick stats fro Postfix events from a Postfix log file. 
+Adz is a small tool for showing some quick stats for Postfix events from a Postfix log file. 
 
 # Usage
 
 See `adz -h` for details. Quick summary: `-a AGEINMINUTES` to set the number of
 minutes old an event is to be counted; default is 1 minute. Use `-f FILENAME`
-to specify a file other than `/var/log/maillog`.o
+to specify a file other than `/var/log/maillog`.
 
 # Stats
 
