@@ -1,0 +1,13 @@
+os: linux
+
+language: go
+
+go: 
+    - "1.10"
+
+before_install:
+    - go get github.com/tcnksm/ghr
+
+after_install:
+    - go build
+    - ghr  --username postfix-tools --token $GITHUB_TOKEN --replace $(cat .buildno) adz

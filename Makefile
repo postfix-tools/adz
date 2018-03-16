@@ -21,6 +21,14 @@ osx:
 	@echo Building Darwin binary
 	@GOOS="darwin" GOARCH="amd64" go build -o adz -ldflags "-X=main.BUILD=$(NOW) -X=main.VERSION=$(BUILD_NUMBER)"
 
+release:
+	@echo Building Darwin binary
+	@GOOS="darwin" GOARCH="amd64" go build -o adz.darwin -ldflags "-X=main.BUILD=$(NOW) -X=main.VERSION=$(BUILD_NUMBER)"
+	@echo Building Linux binary
+	@GOOS="linux" GOARCH="amd64" go build -o adz.linux -ldflags "-X=main.BUILD=$(NOW) -X=main.VERSION=$(BUILD_NUMBER)"
+	# Add GH release calls
+
+
 
 # This is useful for when you have a local docker 
 # # but no local Go installation
