@@ -10,4 +10,5 @@ before_install:
 
 after_install:
     - go build
-    - ghr  --username postfix-tools --token $GITHUB_TOKEN --replace $(cat .buildno) adz
+    - tar -cvzf adz-$(cat .buildno).tar.gz dist/*
+    - ghr  --username postfix-tools --token $GITHUB_TOKEN --replace $(cat .buildno) adz-$(cat .buildno).tar.gz
